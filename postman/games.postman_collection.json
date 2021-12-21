@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "6c2c41ce-925c-4879-b922-67e5c856d05f",
+		"name": "games",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/products",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"products"
+					]
+				},
+				"description": "Finds all of the products"
+			},
+			"response": []
+		},
+		{
+			"name": "findByProductName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/productName/:productName",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"productName",
+						":productName"
+					],
+					"variable": [
+						{
+							"key": "productName",
+							"value": "Sonic the Hedgehog"
+						}
+					]
+				},
+				"description": "Finds a specific product by the path variable productName"
+			},
+			"response": []
+		},
+		{
+			"name": "findProductByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/productCategory/:productCategory",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"productCategory",
+						":productCategory"
+					],
+					"variable": [
+						{
+							"key": "productCategory",
+							"value": "Controller"
+						}
+					]
+				},
+				"description": "Finds all products by a specific category with the path variable productCategory"
+			},
+			"response": []
+		},
+		{
+			"name": "findBySystemRestriction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/systemRestriction/:systemRestriction",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"systemRestriction",
+						":systemRestriction"
+					],
+					"variable": [
+						{
+							"key": "systemRestriction",
+							"value": "Nintendo"
+						}
+					]
+				},
+				"description": "Finds all products based on the System they are compatible with, with the path variable systemRestriction"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllProductsInStockIsTrue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/inStock",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"inStock"
+					]
+				},
+				"description": "Finds all of the products that are in stock"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllProductsByRarity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/productRarity/:productRarity",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"productRarity",
+						":productRarity"
+					],
+					"variable": [
+						{
+							"key": "productRarity",
+							"value": "Rare"
+						}
+					]
+				},
+				"description": "Finds all of the products based on their rarity from the given path variable productRarity"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllByPublisher",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/publisher/:publisher",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"publisher",
+						":publisher"
+					],
+					"variable": [
+						{
+							"key": "publisher",
+							"value": "Sega"
+						}
+					]
+				},
+				"description": "Finds all of the products based on their publisher from the path variable publisher"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllByDeveloper",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/developer/:developer",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"developer",
+						":developer"
+					],
+					"variable": [
+						{
+							"key": "developer",
+							"value": "Nintendo"
+						}
+					]
+				},
+				"description": "Finds all products based on their developer with the path variable developer"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllByReleaseDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/releaseDate/:releaseDate",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"releaseDate",
+						":releaseDate"
+					],
+					"variable": [
+						{
+							"key": "releaseDate",
+							"value": "1999"
+						}
+					]
+				},
+				"description": "Finds all products based on their release date from the path variable releaseDate"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllByGenre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/genre/:genre",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"genre",
+						":genre"
+					],
+					"variable": [
+						{
+							"key": "genre",
+							"value": "Action"
+						}
+					]
+				},
+				"description": "Finds all products by their genre from the path variable genre"
+			},
+			"response": []
+		},
+		{
+			"name": "createNewShoppingCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 13,\r\n    \"productName\": \"Mega Man X\",\r\n    \"productCategory\": \"Game\",\r\n    \"genre\": \"Action\",\r\n    \"productDescription\": \"Near the end of his life, Dr. Light succeeds in creating the first of a new series of robots which will change the world. Able to think and make decisions, this new robot holds great danger as well as great possibilities.\",\r\n    \"productRarity\": \"Common\",\r\n    \"developer\": \"Capcom\",\r\n    \"publisher\": \"Capcom\",\r\n    \"releaseDate\": 1993,\r\n    \"productPrice\": 35.00,\r\n    \"systemRestriction\": \"Super Nintendo\",\r\n    \"inStock\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/shoppingCart",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"shoppingCart"
+					]
+				},
+				"description": "Creates a new shopping cart by adding the product from the request body"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllShoppingCarts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/shoppingCart",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"shoppingCart"
+					]
+				},
+				"description": "Gets all of the shopping carts"
+			},
+			"response": []
+		},
+		{
+			"name": "findShoppingCart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/shoppingCart/:shoppingCartId",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"shoppingCart",
+						":shoppingCartId"
+					],
+					"variable": [
+						{
+							"key": "shoppingCartId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Finds a specific shopping cart from the path variable shoppingCartId"
+			},
+			"response": []
+		},
+		{
+			"name": "addProductToShoppingCart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 13,\r\n    \"productName\": \"Mega Man X\",\r\n    \"productCategory\": \"Game\",\r\n    \"genre\": \"Action\",\r\n    \"productDescription\": \"Near the end of his life, Dr. Light succeeds in creating the first of a new series of robots which will change the world. Able to think and make decisions, this new robot holds great danger as well as great possibilities.\",\r\n    \"productRarity\": \"Common\",\r\n    \"developer\": \"Capcom\",\r\n    \"publisher\": \"Capcom\",\r\n    \"releaseDate\": 1993,\r\n    \"productPrice\": 35.00,\r\n    \"systemRestriction\": \"Super Nintendo\",\r\n    \"inStock\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/shoppingCart/:shoppingCartId/product",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"shoppingCart",
+						":shoppingCartId",
+						"product"
+					],
+					"variable": [
+						{
+							"key": "shoppingCartId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Adds a specific product, from the request body, to an existing shopping cart, from the path variable shoppingCartId"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProductFromShoppingCart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/shoppingCart/:shoppingCartId/product/:productId",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"shoppingCart",
+						":shoppingCartId",
+						"product",
+						":productId"
+					],
+					"variable": [
+						{
+							"key": "shoppingCartId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "13"
+						}
+					]
+				},
+				"description": "Deletes a specific product, by the path variable productId, from a specific shoppingCart, by the path variable shoppingCartId "
+			},
+			"response": []
+		}
+	]
+}
